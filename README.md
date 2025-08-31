@@ -34,15 +34,9 @@ The workflow proceeds from **data collection → pair screening → signal gener
 - Compute weights `wA, wB` so that positions are **dollar-neutral**.
 
 ### 3. Spread & Z-Score Calculation
-- Spread is defined as:
-  \[
-  \text{spread}_t = \log(B_t) - (b_0 + b_1 \log(A_t))
-  \]
+- Spread is defined as: `spread_t = log(B_t) - (b0 + b1 * log(A_t))`
 - Compute rolling **mean** and **standard deviation** of the spread.
-- Standardize into a **z-score**:
-  \[
-  z_t = \frac{\text{spread}_t - \mu}{\sigma}
-  \]
+- Standardize into a **z-score**: `z_t = (spread_t - μ) / σ`
 
 ### 5. Signal & State Logic
 - Entry threshold: `|z| > 1.5`  
@@ -81,8 +75,8 @@ The workflow proceeds from **data collection → pair screening → signal gener
 
 ## Key Files
 - `data.csv` → price data (Adj Close).
-- `backtest_pair.py` → functions for single-pair backtesting.
-- `portfolio_backtest.py` → portfolio-level backtest combining all pairs.
+- `pair_trading_screening.ipynb` → notebook containing screening process
+- `pair_trading_simulation.py` → portfolio-level backtesting process
 - `report.py` → builds results table and equity plots.
 - `README.md` → this file.
 
