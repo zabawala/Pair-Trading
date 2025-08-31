@@ -68,7 +68,6 @@ The workflow proceeds from **data collection → pair screening → signal gener
   - Exported to `combined_summary.csv`
 - **Portfolio**:
   - Daily PnL & cumulative equity  
-  - Equity curve plotted over 2024  
   - Exported to `portfolio_summary.csv`
 
 ---
@@ -76,8 +75,7 @@ The workflow proceeds from **data collection → pair screening → signal gener
 ## Key Files
 - `data.csv` → price data (Adj Close).
 - `pair_trading_screening.ipynb` → notebook containing screening process
-- `pair_trading_simulation.py` → portfolio-level backtesting process
-- `report.py` → builds results table and equity plots.
+- `pair_trading_simulation.ipynb` → portfolio-level backtesting process
 - `README.md` → this file.
 
 ## Next Steps
